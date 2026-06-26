@@ -9,7 +9,7 @@ services:
       - api
 
   api:
-    build: ./app
+    image: vasantharajdigital/my-python-app:v1.0
     expose:
       - "8000"
     environment:
