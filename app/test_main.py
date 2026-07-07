@@ -12,18 +12,18 @@ class TestAPI(unittest.TestCase):
         response = {
             "message": "Production Docker Stack",
             "service": "api",
-            "status": "healthy"
+            "status": "broken"
         }
         json_str = json.dumps(response)
         parsed = json.loads(json_str)
-        self.assertEqual(parsed["status"], "healthy")
+        self.assertEqual(parsed["status"], "broken")
 
     def test_required_fields_present(self):
         """Test all required fields exist"""
         response = {
             "message": "Production Docker Stack",
             "service": "api",
-            "status": "healthy"
+            "status": "broken"
         }
         self.assertIn("message", response)
         self.assertIn("service", response)
